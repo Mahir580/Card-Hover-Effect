@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(16, 16, 44);
+}
+
+.card {
+    margin: 15vh auto;
+    box-shadow: 0 0 10px black;
+    width: 30%;
+    height: 420px;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url(https://files.123freevectors.com/wp-content/original/120579-cool-background.jpg);
+    color: white;
+    background: linear-gradient(to bottom, 80% transparent, 100% rgb(0, 0, 0, 0.5));
+    padding: 20px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .card-body {
+    transform: translateY(100%);
+    transition: .5s;
+    transition-delay: .8s;
+    margin-left: 35px;
+    opacity: 0;
+}
+
+.card .card-body p {
+    width: 90%;
+    margin: 20px 0;
+    font-size: 22px;
+}
+
+.card .card-title h1 {
+    margin-left: 10px;
+    transform: translateY(400%);
+    transition: .5s;
+    transition-delay: .8s;
+    font-size: 40px;
+}
+
+.card .card-title h1::after {
+    content: '';
+    display: block;
+    background-color: limegreen;
+    width: 0;
+    height: 5px;
+    margin-left: -20px;
+    position: absolute;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.card:hover h1::after {
+    width: 250px;
+}
+
+.card:hover h1 {
+    transform: translateY(50%);
+}
+
+.card:hover .card-body {
+    transform: translateY(10%);
+    opacity: 1;
+}
+.card:hover{
+    background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url(https://files.123freevectors.com/wp-content/original/120579-cool-background.jpg);
+    transition: 3s;
+}
+
+.card .card-body button {
+    padding: 8px 15px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 700;
+    transition: .3s;
+    transition-delay: .7s;
+}
+
+.card .card-body button:hover {
+    background-color: crimson;
+}
+
+.card .card-body button::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: crimson;
+    clip-path: polygon(0 0, 100% 0, 100% 8%, 8% 8%, 8% 100%, 0 100%);
+    margin: -8px -15px;
+    transition: .5s;
+}
+
+.card .card-body button::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: crimson;
+    clip-path: polygon(94% 0, 100% 0, 100% 100%, 0 100%, 1% 94%, 94% 94%);
+    margin: 10px -8px;
+    transition: .5s;
+}
+
+.card .card-body button:hover::before {
+    padding: 9px 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 3%, 2% 3%, 2% 100%, 0 100%);
+}
+
+.card .card-body button:hover::after {
+    padding: 9px 50px;
+    margin-top: -9px;
+    margin-left: -105px;
+    clip-path: polygon(98% 95%, 98% 0, 100% 0, 100% 100%, 0 100%, 0 95%);
+}
